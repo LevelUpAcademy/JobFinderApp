@@ -1,0 +1,42 @@
+<%= form_with(model: job, local: true) do |form| %>
+  <% if job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title, class: 'form-label' %>
+    <%= form.text_field :title, id: :job_title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :briefing, class: 'form-label' %>
+    <%= form.text_area :briefing, id: :job_briefing, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :position, class: 'form-label' %>
+    <%= form.text_field :position, id: :job_position, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description, class: 'form-label' %>
+    <%= form.text_area :description, id: :job_description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :payment, class: 'form-label' %>
+    <%= form.text_field :payment, id: :job_payment, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Cadastrar', class: 'btn btn-primary' %>
+  </div>
+<% end %>

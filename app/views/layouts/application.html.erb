@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ColaborativeJobsFinder</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Job.find()</h1>
+        <span>Encontre, compartilhe e opine sobre vagas de trabalho</span>
+      </div>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  </body>
+</html>

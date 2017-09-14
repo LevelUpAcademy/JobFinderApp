@@ -1,0 +1,27 @@
+@import "bootstrap";
+@import "variables";
+@import "overrides";
+
+.card-job {
+
+    background-color: #fbfbfb;
+    box-shadow: 5px 5px 10px whitesmoke;
+    border-radius: 5px;
+    padding: 10px 15px;
+    height: 180px;
+    transition: all .3s ease;
+    h2,p,span{
+      color: $font-color;
+    }
+
+    p{
+      height: 75px;
+      overflow: hidden;
+    }
+
+}
+
+.card-job:hover {
+    box-shadow: 7px 7px 10px #eaeae8;
+    transform: scale3d(1.01, 1.01, 1);
+}
