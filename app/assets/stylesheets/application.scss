@@ -28,3 +28,21 @@
     box-shadow: 7px 7px 10px #eaeae8;
     transform: scale3d(1.01, 1.01, 1);
 }
+
+.comment {
+    padding: 10px 10px;
+    background-color: #fdfdfd;
+    border: 1px solid gainsboro;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px 10px 0px 10px;
+    color: #414141;
+
+    p{
+      margin-bottom:0px;
+    }
+
+    .data{
+      color: lightgray;
+    }
+}

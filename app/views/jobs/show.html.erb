@@ -17,3 +17,19 @@
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>
+
+<hr>
+
+<h2>Comentarios</h2>
+<%= form_for @comment do |f| %>
+  <%= f.text_field :message, id: :comment_message, class: 'form-control' %>
+  <%= f.hidden_field :job, value: @job.id %>
+  <%= f.submit 'Adicionar', class: 'btn btn-primary' %>
+<% end %>
+
+<% @job.comments.each do |c| %>
+  <div class="comment">
+    <p><%= c.message %></p>
+    <p class="data"><%= c.created_at.strftime("%d/%m/%Y - %H:%M:%S") %></p>
+  </div>
+<% end %>
